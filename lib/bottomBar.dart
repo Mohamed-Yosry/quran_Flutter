@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:quran_flutter/sowarListPage.dart';
 class BottomBar extends StatefulWidget {
 
   @override
@@ -10,9 +10,10 @@ class BottomBarState extends State<BottomBar> {
 
   int curruntIndex=2;
   final List <Widget> pages=[
-    //Page1(),
-    //Page2(),
-    //Page3(),
+    SurahsList(),
+    SurahsList(),
+    SurahsList(),
+    SurahsList(),
   ];
 
 
@@ -57,7 +58,6 @@ class BottomBarState extends State<BottomBar> {
               title:Text(''),
               activeIcon: Image.asset("assets/quran_selected.png")
           ),
-          //BottomItem(BottomItemModel("assets/quran.png","assets/quran_selected.png")),
 
 
 
