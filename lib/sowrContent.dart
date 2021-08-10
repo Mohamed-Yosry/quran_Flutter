@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class sowerContent extends StatefulWidget {
   String name;
@@ -17,17 +18,21 @@ class _sowerContent extends State<sowerContent> {
   String path;
   String data = "";
   _sowerContent(this.name, this.path);
-  late final List<String> items;
+  //late final
+  List<String> items;
   fetchFileData() async{
     String resp;
     resp = await rootBundle.loadString(path);
     items = resp.split('\n');
     resp = "";
     for (int i = 0; i < items.length; i++ ){
-      resp += items[i];
-      resp +="(";
-      resp += (i+1).toString();
-      resp +=")";
+      if(items[i] != "") {
+        print(items[i]);
+        resp += items[i];
+        resp += "(";
+        resp += (i + 1).toString();
+        resp += ")";
+      }
     }
     setState(() {
       data = resp;

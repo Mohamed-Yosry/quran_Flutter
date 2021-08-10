@@ -1,5 +1,7 @@
+import 'package:quran_flutter/sowrContent.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 
 class SurahsList extends StatelessWidget {
   static const String routeName='homeList';
@@ -122,58 +124,119 @@ class SurahsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: new Text('إسلامي'),
-        centerTitle: true,
-      ),
-      body:Container(
-        child: new Column(
-        children: [
+    return new Stack(
+        children:[
           new Container(
-            child: new Text('إسلامي'),
-            alignment: Alignment.center,
-          ),
-          new Container(
-            height: 120.0,
-            width: 120.0,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/logo2.png'),
-                fit: BoxFit.fill,
+                image: AssetImage(
+                    "assets/2.png"),
+                fit: BoxFit.cover,
               ),
-              shape: BoxShape.circle,
             ),
           ),
-          new Expanded(
-            child: GridView(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 1,
-              mainAxisExtent: 23,
+          new Column(
+          children: [
+            new Container(
+              padding: EdgeInsets.only(top:30),
+              child: new Text("إسلامي",style: TextStyle(fontSize: 30, color: Colors.black), textAlign: TextAlign.center,),
+              alignment: Alignment.center,
             ),
-            children: surahs.map((e) => FlatButton(
-                onPressed: (){},
-                height: 20.0,
-                child: Row(
-                children:[
-                  new Expanded(child: new Container(
-                      child: new Text(e.ayatCount, textDirection: TextDirection.ltr,),
+            new Container(
+              height: 200.0,
+              width: 200.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/logoImage.jpeg'),
+                  fit: BoxFit.fill,
+                ),
+                shape: BoxShape.circle,
+              ),
+            ),
+            new Container(
+              height: 45,
+              decoration: BoxDecoration(border: Border(top: BorderSide(color: Colors.orange, width: 2),
+              bottom: BorderSide(color: Colors.orange, width: 2))),
+              child:new
+              Row(
+                children: [
+                  new Expanded(
+                    child: new Container(
                       alignment: Alignment.center,
                       decoration: BoxDecoration(border: Border(right: BorderSide(color: Colors.orange, width: 2))),
-                      ),
+                      child: new Text("اسم السورة",textDirection: TextDirection.rtl, style: new TextStyle(
+                      fontSize: 20, color: Colors.black,
+                      )),
+                    ),
                   ),
-                  new Expanded(child: new Container(
-                      child: new Text(e.surahName, textDirection: TextDirection.rtl,),
-                      alignment: Alignment.center,
-                      )
+                  new Expanded(
+                      child: new Container(
+                        child: new Text("عدد الأيات",textDirection: TextDirection.rtl, style: new TextStyle(
+                        fontSize: 20, color: Colors.black,
+                        )),
+                        alignment: Alignment.center,
+                      ),
                   )
                 ],
-            ))).toList(),
-          ),)
+              ),
+            ),
+            new Expanded(
+              child: GridView(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 1,
+                  mainAxisExtent: 30,
+                ),
+                children: surahs.map((e) => FlatButton(
+                    onPressed: (){
+                      String s = findNo(surahs, e);
+                      Navigator.push(context, MaterialPageRoute(builder:(BuildContext context){
+                        return sowerContent(e.surahName, s);
+                      }
+                      ));
+                    },
+                    height: 20.0,
+                    child: Row(
+                      children:[
+                        new Expanded(child: new Container(
+                          child: new Text(e.ayatCount, textDirection: TextDirection.ltr,style: new TextStyle(
+                            fontSize: 20,
+                          ),),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(border: Border(right: BorderSide(color: Colors.orange, width: 2))),
+                        ),
+                        ),
+                        new Expanded(child: new Container(
+                          child: new Text(e.surahName, textDirection: TextDirection.rtl, style: new TextStyle(
+                            fontSize: 20,
+                          )),
+                          alignment: Alignment.center,
+                        )
+                        )
+                      ],
+                    ))).toList(),
+              ),),
+            new Container(
+              child: new Text("sdsljklasd"),
+              margin: EdgeInsets.only(bottom: 40),
+            )
+
           ],
+
         )
-      )
+      ]
     );
+  }
+  String findNo(List<Surah> surahs, Surah e) {
+    String s = "ayat/";
+    for(int i = 0 ; i < surahs.length; i++)
+    {
+      if(surahs[i] == e) {
+        s += (i + 1).toString();
+        print(i+1);
+      }
+    }
+    s += '.txt';
+    return s;
   }
 }
 
