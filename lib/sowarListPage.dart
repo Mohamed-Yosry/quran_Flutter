@@ -214,12 +214,8 @@ class SurahsList extends StatelessWidget {
                         )
                       ],
                     ))).toList(),
-              ),),
-            new Container(
-              child: new Text("sdsljklasd"),
-              margin: EdgeInsets.only(bottom: 40),
-            )
-
+              ),
+            ),
           ],
 
         )
