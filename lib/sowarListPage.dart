@@ -228,7 +228,6 @@ class SurahsList extends StatelessWidget {
     {
       if(surahs[i] == e) {
         s += (i + 1).toString();
-        print(i+1);
       }
     }
     s += '.txt';

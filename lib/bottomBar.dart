@@ -20,14 +20,13 @@ class BottomBarState extends State<BottomBar> {
   void inc(int x) {
     setState(() {
       curruntIndex=x;
-      debugPrint('$x');
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //body: pages[curruntIndex],
+      body: pages[curruntIndex],
 
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color.fromRGBO(223, 170, 97, 1),

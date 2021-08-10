@@ -27,7 +27,6 @@ class _sowerContent extends State<sowerContent> {
     resp = "";
     for (int i = 0; i < items.length; i++ ){
       if(items[i] != "") {
-        print(items[i]);
         resp += items[i];
         resp += "(";
         resp += (i + 1).toString();
@@ -75,7 +74,7 @@ class _sowerContent extends State<sowerContent> {
               Container(
                 margin: EdgeInsets.only(bottom: 10,top: 30),
                 child:
-                Text("سورة " + name, style: TextStyle(fontSize: 30) ,textAlign: TextAlign.center,),
+                Text("سورة " + name, style: TextStyle(fontSize: 30,decoration: TextDecoration.underline) ,textAlign: TextAlign.center,),
               ),
               Expanded(
                 child: Container(
