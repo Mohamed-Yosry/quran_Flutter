@@ -21,11 +21,6 @@
              android:gravity="bottom"
              android:src="@mipmap/group7" />
 
-        <bitmap
-            android:gravity="center"
-            android:src="@mipmap/logo2" />
-
-
     </item>
 
 
