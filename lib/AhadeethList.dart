@@ -77,10 +77,10 @@ class HadeethsList extends StatelessWidget {
                 ),
                 new Container(
                   height: 200.0,
-                  width: 200.0,
+                  width: 300.0,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                    image: AssetImage('assets/logo2@3x.png'),
+                    image: AssetImage('assets/img.png'),
                     fit: BoxFit.fill,
                   ),
                  shape: BoxShape.circle,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quran_flutter/sowarListPage.dart';
+import 'package:quran_flutter/AhadeethList.dart';
+
 class BottomBar extends StatefulWidget {
 
   @override
@@ -12,7 +14,7 @@ class BottomBarState extends State<BottomBar> {
   final List <Widget> pages=[
     SurahsList(),
     SurahsList(),
-    SurahsList(),
+    HadeethsList(),
     SurahsList(),
   ];
 
