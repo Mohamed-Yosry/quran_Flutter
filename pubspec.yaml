@@ -50,6 +50,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/
+    - ayat/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
