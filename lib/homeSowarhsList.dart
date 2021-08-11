@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quran_flutter/sowarListPage.dart';
-import 'package:quran_flutter/sowrContent.dart';
+
+import 'sowarListPage.dart';
 
 class HomeSowrahsList extends StatelessWidget {
 

@@ -1,6 +1,7 @@
-import 'package:quran_flutter/sowrContent.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'sowrContent.dart';
 
 
 class SurahsList extends StatelessWidget {

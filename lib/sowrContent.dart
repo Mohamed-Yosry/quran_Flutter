@@ -18,12 +18,11 @@ class _sowerContent extends State<sowerContent> {
   String path;
   String data = "";
   _sowerContent(this.name, this.path);
-  //late final
-  List<String> items;
+
   fetchFileData() async{
     String resp;
     resp = await rootBundle.loadString(path);
-    items = resp.split('\n');
+    List<String> items = resp.split('\n');
     resp = "";
     for (int i = 0; i < items.length; i++ ){
       if(items[i] != "") {

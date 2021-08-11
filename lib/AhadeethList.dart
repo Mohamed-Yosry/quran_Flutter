@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quran_flutter/ahadethContent.dart';
+
+import 'ahadethContent.dart';
 
 class HadeethsList extends StatelessWidget {
   int hadeethNum=0;
