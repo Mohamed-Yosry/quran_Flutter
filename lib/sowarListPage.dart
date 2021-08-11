@@ -165,14 +165,14 @@ class SurahsList extends StatelessWidget {
                     child: new Container(
                       alignment: Alignment.center,
                       decoration: BoxDecoration(border: Border(right: BorderSide(color: Colors.orange, width: 2))),
-                      child: new Text("اسم السورة",textDirection: TextDirection.rtl, style: new TextStyle(
+                      child: new Text("عدد الأيات",textDirection: TextDirection.rtl, style: new TextStyle(
                       fontSize: 20, color: Colors.black,
                       )),
                     ),
                   ),
                   new Expanded(
                       child: new Container(
-                        child: new Text("عدد الأيات",textDirection: TextDirection.rtl, style: new TextStyle(
+                        child: new Text("أسم السورة",textDirection: TextDirection.rtl, style: new TextStyle(
                         fontSize: 20, color: Colors.black,
                         )),
                         alignment: Alignment.center,
