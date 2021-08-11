@@ -39,16 +39,24 @@ class _sebha extends State<sebha> {
               Container(
                 margin: EdgeInsets.only(right: 10,top:25),
                 child:
-                  Expanded(
-                    child: Center(
+                  Center(
                       child:Text("اسلامي",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
                     ),
-                  ),
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 10,top: 30),
-                child:
-                  Image.asset("assets/tasbih.png",width: 200,height:200,),
+                margin: EdgeInsets.only(bottom: 0,top: 30),
+                child:Column(
+                  children: [
+
+                    Image.asset("assets/sebhaHead.png",width: 50,height:60,),
+                    new RotatedBox(
+                        child: IconButton(icon: Image.asset("assets/sebhaBody.png"),onPressed: () {
+                          increament();
+                        },iconSize: 200,),
+                      quarterTurns: counter,
+                    )
+                  ],
+                )
               ),
               Container(
                 margin: EdgeInsets.only(bottom: 10,top: 30),
@@ -64,9 +72,7 @@ class _sebha extends State<sebha> {
         Container(
           padding: EdgeInsets.only(bottom: 10),
           child: RaisedButton(
-                  onPressed: () {
-                    increament();
-                  },
+                  onPressed: null,
                   child: Text(
                     s[index],
                     style: TextStyle(color: Colors.white, fontSize: 45),
