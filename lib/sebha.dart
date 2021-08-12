@@ -37,36 +37,41 @@ class _sebha extends State<sebha> {
         child: Column(
             children:[
               Container(
-                margin: EdgeInsets.only(right: 10,top:25),
+                margin: EdgeInsets.only(right: 10,top:25,bottom: 30),
                 child:
-                  Expanded(
-                    child: Center(
+                  Center(
                       child:Text("اسلامي",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
                     ),
-                  ),
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 10,top: 30),
-                child:
-                  Image.asset("assets/tasbih.png",width: 200,height:200,),
+                padding: EdgeInsets.all(0),
+                child: Column(
+                  children: [
+                    Padding(padding: EdgeInsets.only(left: 30,bottom:0),child:Image.asset("assets/sebhaHead.png",width: 80,height:80,)),
+                    new RotatedBox(
+                      child: IconButton(icon: Image.asset("assets/sebhaBody.png"),onPressed: () {
+                        increament();
+                      },iconSize: 200,),
+                      quarterTurns: counter,
+                    )
+                  ],
+                )
+
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 10,top: 30),
+                margin: EdgeInsets.only(bottom: 10,top: 20),
                 child:Text("عدد التسبيحات",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
               ),
               Container(
                 width: 50, height: 50,
                 alignment: Alignment.center,
                 color: Color.fromRGBO(250, 215, 160, 1),
-                margin: EdgeInsets.only(bottom: 30,top: 30),
+                margin: EdgeInsets.only(bottom: 20,top: 20),
                 child:Text("$counter" ,style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
               ),
         Container(
           padding: EdgeInsets.only(bottom: 10),
           child: RaisedButton(
-                  onPressed: () {
-                    increament();
-                  },
                   child: Text(
                     s[index],
                     style: TextStyle(color: Colors.white, fontSize: 45),
