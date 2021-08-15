@@ -1,16 +1,24 @@
+
 # quran_flutter
 
 A new Flutter application.
 
 ## Getting Started
+## Native Splash Screen
 
-This project is a starting point for a Flutter application.
+### First for android 
+1. Go to this path (StudioProjects\quran_Flutter\android\app\src\main\res).
+2. put images in different size in files (mipmap-hdpi - mipmap-xxhdpi - mipmap-xxxhdpi).
+3. edit file (launch_background.xml) with new assests.
 
-A few resources to get you started if this is your first Flutter project:
+### Second for ios
+1. Go to (StudioProjects\quran_Flutter\ios\Runner\Assets.xcassets\LaunchImage.imageset).
+2. put images in different size.
+3. edit file Contents.json .
+4. edit file LaunchScreen.storyboard.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Image for screen
+![splash_bg](https://user-images.githubusercontent.com/66642836/129480076-dc52121f-3499-42e6-94b9-93dd7d363f8a.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
