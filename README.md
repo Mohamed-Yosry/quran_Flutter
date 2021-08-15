@@ -25,7 +25,7 @@ A new Flutter application.
 ### Main Widget
 BottomNavigationBar by using bottomNavigationBar in Scafold.
 
-###Consists of 4 bottom navigation bar item
+### Consists of 4 bottom navigation bar item
 1. Radio
 2. Sebha
 3. Hadeth
@@ -39,6 +39,24 @@ BottomNavigationBar by using bottomNavigationBar in Scafold.
 ![bottom bar](https://user-images.githubusercontent.com/61477146/129481287-0167362e-eb91-434c-bcc0-87a7a443f479.png)
 
 
+## Quraan List
+
+### Main Widget
+* GridView which its child is a FlatButton that display the Sorah Name and its Number of Ayat, and the onPressed function redirect you to the Sorah content.
+* the header of the page with the title and a photo in a Column Widget.
+
+### Image for the screen
+<img src="https://user-images.githubusercontent.com/45634921/129483294-8b489110-ae5d-438a-ae53-2c6fefc27b8b.jpg" alt="drawing" width="200"/>
+
+
+## Ahadeeth List
+
+### Main Widget
+* ListView by using ListView.builder that is returning a Card with a child of ListTile that displays the Hadeeth Number, and the onPressed function redirect you to the Hadeeth content.
+* the header of the page with the title and a photo in a Column Widget.
+
+### Image for the screen
+<img src="https://user-images.githubusercontent.com/45634921/129483574-bd641658-f8d6-4dae-b6c9-2d09c6a5e288.jpg" alt="drawing" width="200"/>
 
 
 
