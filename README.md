@@ -66,5 +66,16 @@ change the "Zekr" on every pressed on the sebha
 ### Image for the screen
 ![Screenshot_1629045007](https://user-images.githubusercontent.com/61477146/129485586-265a3d98-ffea-4ee3-80bb-7587d9d97491.png)
 
+### sower content
+
+we display sowar content by roll
+![image](https://user-images.githubusercontent.com/60001834/129487277-8eff7790-4dc1-4fd6-a471-0ac19fa94758.png)
 
 
+
+### ahadeth content
+
+we display sowar content by roll
+
+
+![image](https://user-images.githubusercontent.com/60001834/129487329-90626f1f-e42c-4360-b2f4-25db6f5af93e.png)
