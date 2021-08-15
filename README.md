@@ -59,6 +59,12 @@ BottomNavigationBar by using bottomNavigationBar in Scafold.
 <img src="https://user-images.githubusercontent.com/45634921/129483574-bd641658-f8d6-4dae-b6c9-2d09c6a5e288.jpg" alt="drawing" width="200"/>
 
 
+## Sebha Screen
+Usded (RotatedBox) widget for rottation of sebhaBody img
+change the "Zekr" on every pressed on the sebha
+
+### Image for the screen
+![Screenshot_1629045007](https://user-images.githubusercontent.com/61477146/129485586-265a3d98-ffea-4ee3-80bb-7587d9d97491.png)
 
 
 
