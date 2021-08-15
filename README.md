@@ -36,7 +36,9 @@ BottomNavigationBar by using bottomNavigationBar in Scafold.
 2. by clicking the icon the index changed in (inc) function to the needed class and the body change.
 
 ### Image for screen
-![splash_bg](https://user-images.githubusercontent.com/66642836/129480076-dc52121f-3499-42e6-94b9-93dd7d363f8a.png)
+![bottom bar](https://user-images.githubusercontent.com/61477146/129481287-0167362e-eb91-434c-bcc0-87a7a443f479.png)
+
+
 
 
 
