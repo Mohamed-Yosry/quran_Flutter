@@ -37,7 +37,7 @@ class _ahadethContent extends State<ahadethContent> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-                "assets/2.png"),
+                "assets/bg3.png"),
             fit: BoxFit.cover,
           ),
         ),

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'SideMenu.dart';
 import 'sowrContent.dart';
 
 
@@ -131,7 +132,7 @@ class SurahsList extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                    "assets/2.png"),
+                    "assets/bg3.png"),
                 fit: BoxFit.cover,
               ),
             ),

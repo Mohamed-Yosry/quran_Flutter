@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:quran_flutter/SideMenu.dart';
 import 'package:quran_flutter/sebha.dart';
-
+import 'package:quran_flutter/SideMenu.dart';
 import 'AhadeethList.dart';
 import 'sowarListPage.dart';
+
 class BottomBar extends StatefulWidget {
 
   @override
@@ -35,7 +37,6 @@ class BottomBarState extends State<BottomBar> {
         backgroundColor: Color.fromRGBO(223, 170, 97, 1),
 
         items: [
-
           BottomNavigationBarItem(
               icon: Image.asset("assets/radio.png"),
               title:Text(''),
@@ -60,13 +61,12 @@ class BottomBarState extends State<BottomBar> {
               title:Text(''),
               activeIcon: Image.asset("assets/quran_selected.png")
           ),
-
         ],
         onTap: inc,
         currentIndex: curruntIndex,
         type: BottomNavigationBarType.fixed,
-
       ),
+
     );
   }
 }

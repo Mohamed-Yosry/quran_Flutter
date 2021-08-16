@@ -30,7 +30,7 @@ class _sebha extends State<sebha> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-                "assets/2.png"),
+                "assets/bg3.png"),
             fit: BoxFit.cover,
           ),
         ),

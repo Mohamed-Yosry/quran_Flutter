@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+
+import 'AooConfigProvider.dart';
 
 class sowerContent extends StatefulWidget {
   String name;
@@ -36,9 +39,10 @@ class _sowerContent extends State<sowerContent> {
       data = resp;
     });
   }
+  AppConfigProvider provider;
   @override
   Widget build(BuildContext context) {
-
+    provider = Provider.of<AppConfigProvider>(context);
 
     // TODO: implement build
     return Scaffold(
@@ -46,7 +50,7 @@ class _sowerContent extends State<sowerContent> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-                "assets/2.png"),
+                "assets/bg3.png"),
             fit: BoxFit.cover,
           ),
         ),
