@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:quran_flutter/SideMenu.dart';
 import 'package:quran_flutter/sebha.dart';
 import 'package:quran_flutter/SideMenu.dart';
 import 'AhadeethList.dart';
+import 'AppConfigProvider.dart';
 import 'sowarListPage.dart';
 
 class BottomBar extends StatefulWidget {
@@ -27,14 +29,29 @@ class BottomBarState extends State<BottomBar> {
       curruntIndex = x;
     });
   }
-
+  AppConfigProvider provider;
   @override
   Widget build(BuildContext context) {
+    provider = Provider.of<AppConfigProvider>(context);
     return Scaffold(
-      body: pages[curruntIndex],
+      drawer: SideMenu(),
+      appBar: AppBar(
+        title: Text('Calculator',style: TextStyle(fontSize: 25),textAlign: TextAlign.center,),
+        backgroundColor: Colors.blueGrey,
+      ),
+      body:Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: provider.isDarkModeEnable()?AssetImage(
+                      "assets/bg.png"):AssetImage(
+                      "assets/bg3.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            child:pages[curruntIndex],
+          ),
 
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromRGBO(223, 170, 97, 1),
 
         items: [
           BottomNavigationBarItem(

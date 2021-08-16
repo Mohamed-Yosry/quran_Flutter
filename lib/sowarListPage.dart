@@ -128,20 +128,11 @@ class SurahsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Stack(
         children:[
-          new Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                    "assets/bg3.png"),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
           new Column(
           children: [
             new Container(
               padding: EdgeInsets.only(top:30),
-              child: new Text("إسلامي",style: TextStyle(fontSize: 30, color: Colors.black), textAlign: TextAlign.center,),
+              child: new Text("إسلامي",style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
               alignment: Alignment.center,
             ),
             new Container(
@@ -167,14 +158,14 @@ class SurahsList extends StatelessWidget {
                       alignment: Alignment.center,
                       decoration: BoxDecoration(border: Border(right: BorderSide(color: Colors.orange, width: 2))),
                       child: new Text("عدد الأيات",textDirection: TextDirection.rtl, style: new TextStyle(
-                      fontSize: 20, color: Colors.black,
+                      fontSize: 20,
                       )),
                     ),
                   ),
                   new Expanded(
                       child: new Container(
                         child: new Text("أسم السورة",textDirection: TextDirection.rtl, style: new TextStyle(
-                        fontSize: 20, color: Colors.black,
+                        fontSize: 20,
                         )),
                         alignment: Alignment.center,
                       ),

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
-import 'package:quran_flutter/AooConfigProvider.dart';
+import 'package:quran_flutter/AppConfigProvider.dart';
 
 class SideMenu extends StatefulWidget {
   @override
@@ -55,7 +55,7 @@ class _SideMenuState extends State<SideMenu> {
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 12),
-                child: Text('Light',textAlign: TextAlign.center,),
+                child: Text('عربي',textAlign: TextAlign.center,),
               ),
             ),
             InkWell(
@@ -64,7 +64,7 @@ class _SideMenuState extends State<SideMenu> {
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 12),
-                child: Text('Dark',textAlign: TextAlign.center,),
+                child: Text('English',textAlign: TextAlign.center,),
               ),
             ),
           ],

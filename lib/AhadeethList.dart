@@ -60,15 +60,6 @@ class HadeethsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Stack(
         children:[
-          new Container(
-            decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(
-                "assets/bg3.png"),
-                 fit: BoxFit.cover,
-              ),
-             ),
-          ),
           new Column(
               children: [
                 new Container(
