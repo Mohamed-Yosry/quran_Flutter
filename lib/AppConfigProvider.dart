@@ -11,7 +11,6 @@ class AppConfigProvider extends ChangeNotifier{
     locale=language;
     notifyListeners();
   }
-class AppConfigProvider extends ChangeNotifier {
   ThemeMode themeMode = ThemeMode.light;
 
 

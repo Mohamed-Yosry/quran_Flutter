@@ -30,7 +30,7 @@ class _ahadethContent extends State<ahadethContent> {
       data = resp;
     });
   }
-  AppConfigProvider provider;
+  late AppConfigProvider provider;
   @override
   Widget build(BuildContext context) {
     provider = Provider.of<AppConfigProvider>(context);

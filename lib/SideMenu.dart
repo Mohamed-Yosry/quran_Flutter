@@ -10,7 +10,7 @@ class SideMenu extends StatefulWidget {
 }
 
 class _SideMenuState extends State<SideMenu> {
-  AppConfigProvider provider;
+  late AppConfigProvider provider;
   @override
   Widget build(BuildContext context) {
     provider = Provider.of<AppConfigProvider>(context);
@@ -51,7 +51,7 @@ class _SideMenuState extends State<SideMenu> {
           children: [
             InkWell(
               onTap: (){
-                changeTheme();
+                provider.cahngeLanguage('ar');
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 12),
@@ -60,7 +60,7 @@ class _SideMenuState extends State<SideMenu> {
             ),
             InkWell(
               onTap: (){
-                changeTheme();
+                provider.cahngeLanguage('en');
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 12),

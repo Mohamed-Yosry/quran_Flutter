@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quran_flutter/sebha.dart';
-
+import 'package:quran_flutter/SideMenu.dart';
 import 'AhadeethList.dart';
 import 'AppConfigProvider.dart';
 import 'sowarListPage.dart';
@@ -28,7 +28,7 @@ class BottomBarState extends State<BottomBar> {
       curruntIndex = x;
     });
   }
-
+  late AppConfigProvider provider;
   @override
   Widget build(BuildContext context) {
     provider = Provider.of<AppConfigProvider>(context);

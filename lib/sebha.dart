@@ -27,7 +27,7 @@ class _sebha extends State<sebha> {
   _sebha();
 
   @override
-    AppConfigProvider provider;
+  late  AppConfigProvider provider;
     @override
     Widget build(BuildContext context) {
       provider = Provider.of<AppConfigProvider>(context);
@@ -81,7 +81,7 @@ class _sebha extends State<sebha> {
 
                 width: 50, height: 50,
                 alignment: Alignment.center,
-                color: Color.fromRGBO(250, 215, 160, 1),
+                //color: Color.fromRGBO(250, 215, 160, 1),
                 margin: EdgeInsets.only(bottom: 20,top: 20),
                 child:Text("$counter" ,style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
               ),

@@ -21,6 +21,9 @@ class MyApp extends StatelessWidget {
       {
         final provider = Provider.of<AppConfigProvider>(buildContext);
         return MaterialApp(
+          locale: Locale.fromSubtags(languageCode: provider.locale),
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
           themeMode: provider.themeMode,
           theme: MyThemeData.lightTheme,
           darkTheme: MyThemeData.darkTheme,

@@ -39,7 +39,7 @@ class _sowerContent extends State<sowerContent> {
       data = resp;
     });
   }
-  AppConfigProvider provider;
+  late AppConfigProvider provider;
   @override
   Widget build(BuildContext context) {
     provider = Provider.of<AppConfigProvider>(context);
