@@ -4,5 +4,11 @@
     "ahadeeth_theTitle": "Al-Ahadeeth",
     "tasbeehCounter": "tasbeeh counter",
     "surahName": "Surah Name",
-    "ayaatCounter": "Number of Ayaat"
+    "ayaatCounter": "Number of Ayaat",
+    "settings": "Settings",
+    "quraan": "Quraan",
+    "ahadeeth": "Ahadeeth",
+    "sebha": "Sebha",
+    "radio": "Radio"
+
 }
