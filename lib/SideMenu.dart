@@ -26,7 +26,7 @@ class _SideMenuState extends State<SideMenu> {
                 changeLanguage();
               },
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 40,),
+                padding: EdgeInsets.symmetric(vertical: 70,),
                   child: Text('language',textAlign: TextAlign.center,style: TextStyle(fontSize: 30),)),
             ),
             InkWell(
@@ -40,7 +40,7 @@ class _SideMenuState extends State<SideMenu> {
             ),
           ],
         ),
-      ),
+
     );
   }
   void changeLanguage() {
@@ -52,7 +52,6 @@ class _SideMenuState extends State<SideMenu> {
           children: [
             InkWell(
               onTap: (){
-                changeTheme();
                 //Navigator.pop(context);
                 provider.cahngeLanguage('ar');
               },
@@ -64,7 +63,6 @@ class _SideMenuState extends State<SideMenu> {
             ),
             InkWell(
               onTap: (){
-                changeTheme();
                 //Navigator.pop(context);
                 provider.cahngeLanguage('en');
               },

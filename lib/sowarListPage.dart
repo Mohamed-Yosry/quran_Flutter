@@ -136,7 +136,7 @@ class SurahsList extends StatelessWidget {
                 new Container(
                   padding: EdgeInsets.only(top:30),
                   child: new Text(AppLocalizations.of(context)!.islamy,
-                    style: TextStyle(fontSize: 30, color: Colors.black), textAlign: TextAlign.center,),
+                    style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
                   alignment: Alignment.center,
                 ),
                 new Container(
@@ -152,18 +152,18 @@ class SurahsList extends StatelessWidget {
                 ),
                 new Container(
                   height: 45,
-                  decoration: BoxDecoration(border: Border(top: BorderSide(color: Colors.orange, width: 2),
-                      bottom: BorderSide(color: Colors.orange, width: 2))),
+                  decoration: BoxDecoration(border: Border(top: BorderSide(color: Theme.of(context).accentColor, width: 2),
+                      bottom: BorderSide(color: Theme.of(context).accentColor, width: 2))),
                   child:new
                   Row(
                     children: [
                       new Expanded(
                         child: new Container(
                           alignment: Alignment.center,
-                          decoration: BoxDecoration(border: Border(right: BorderSide(color: Colors.orange, width: 2))),
+                          decoration: BoxDecoration(border: Border(right: BorderSide(color: Theme.of(context).accentColor, width: 2))),
                           child: new Text(AppLocalizations.of(context)!.ayaatCounter,
                               textDirection: TextDirection.rtl, style: new TextStyle(
-                                fontSize: 20, color: Colors.black,
+                                fontSize: 20,
                               )),
                         ),
                       ),
@@ -171,7 +171,7 @@ class SurahsList extends StatelessWidget {
                         child: new Container(
                           child: new Text(AppLocalizations.of(context)!.surahName,
                               textDirection: TextDirection.rtl, style: new TextStyle(
-                                fontSize: 20, color: Colors.black,
+                                fontSize: 20,
                               )),
                           alignment: Alignment.center,
                         ),
@@ -201,7 +201,7 @@ class SurahsList extends StatelessWidget {
                                 fontSize: 20,
                               ),),
                               alignment: Alignment.center,
-                              decoration: BoxDecoration(border: Border(right: BorderSide(color: Colors.orange, width: 2))),
+                              decoration: BoxDecoration(border: Border(right: BorderSide(color: Theme.of(context).accentColor, width: 2))),
                             ),
                             ),
                             new Expanded(child: new Container(

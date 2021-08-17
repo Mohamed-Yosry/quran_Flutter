@@ -8,8 +8,10 @@ class HadeethsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    for(int i=1;i<51;i++)
-    {
+    AHadeeths.clear();
+
+   for(int i=1;i<51;i++)
+   {
       AHadeeths.add(new Hadeeth(AppLocalizations.of(context)!.hadeethName+" "));
     }
     return new Stack(
@@ -19,7 +21,7 @@ class HadeethsList extends StatelessWidget {
                 new Container(
                   padding: EdgeInsets.only(top:30, bottom: 40),
                   child: new Text(AppLocalizations.of(context)!.islamy,
-                    style: TextStyle(fontSize: 30, color: Colors.black), textAlign: TextAlign.center,),
+                    style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
                     alignment: Alignment.center,
                 ),
                 new Container(
@@ -37,14 +39,14 @@ class HadeethsList extends StatelessWidget {
                   margin: EdgeInsets.only(top: 30),
                   height: 45,
                   //alignment: Alignment.center,
-                  decoration: BoxDecoration(border: Border(top: BorderSide(color: Colors.orange, width: 2),
-                      bottom: BorderSide(color: Colors.orange, width: 2))),
+                  decoration: BoxDecoration(border: Border(top: BorderSide(color: Theme.of(context).accentColor, width: 2),
+                      bottom: BorderSide(color: Theme.of(context).accentColor, width: 2))),
                   child: new Row (
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                         new Text(AppLocalizations.of(context)!.ahadeeth_theTitle,
                           textDirection: TextDirection.rtl, style: new TextStyle(
-                          fontSize: 23, color: Colors.black,), textAlign: TextAlign.center,),
+                          fontSize: 23), textAlign: TextAlign.center,),
                       ],
                   )
 

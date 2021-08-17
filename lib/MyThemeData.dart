@@ -9,7 +9,7 @@ class MyThemeData{
    colorScheme: ColorScheme.light(),
 
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: Color.fromRGBO(223, 170, 97, 1),
+      backgroundColor: Color.fromRGBO(183, 147, 95, 1),
       selectedIconTheme: IconThemeData(
         color: Colors.black,
       ),
@@ -25,14 +25,11 @@ class MyThemeData{
         fontSize: 20,
         color: Colors.black,
       ),
-      bodyText2: TextStyle(
-        fontSize: 15,
-        color: Colors.black,
-      ),
+
     ),
 
-      accentColor: Color.fromRGBO(201, 179, 150, 1),
-      buttonColor:  Color.fromRGBO(183, 143, 95, 1)
+      accentColor: Color.fromRGBO(183, 147, 95, 1),
+      buttonColor:  Color.fromRGBO(183, 147, 95, 1)
 
   );
 
@@ -61,13 +58,10 @@ class MyThemeData{
         fontSize: 20,
         color: Colors.yellowAccent,
       ),
-      bodyText2: TextStyle(
-        fontSize: 15,
-        color: Colors.yellowAccent,
-      ),
+
     ),
 
-      accentColor: Color.fromRGBO(21, 27, 49, 1),
+      accentColor: Color.fromRGBO(250, 204, 29, 1),
 
       buttonColor: Color.fromRGBO(250, 204, 29, 1),
 

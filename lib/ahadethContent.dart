@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'AppConfigProvider.dart';
 
@@ -59,7 +60,7 @@ class _ahadethContent extends State<ahadethContent> {
                     ),
                     Expanded(
                       child: Center(
-                        child:Text("اسلامي",style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
+                        child:Text(AppLocalizations.of(context)!.islamy,style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
                       ),
                     ),
                   ],

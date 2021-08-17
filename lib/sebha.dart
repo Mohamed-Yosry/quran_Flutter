@@ -76,12 +76,12 @@ class _sebha extends State<sebha> {
                 decoration:BoxDecoration(
                 border: Border.all(),
                    borderRadius: BorderRadius.all(Radius.circular(12)),
+
                     color: Theme.of(context).accentColor,
                       ),
 
                 width: 50, height: 50,
                 alignment: Alignment.center,
-                //color: Color.fromRGBO(250, 215, 160, 1),
                 margin: EdgeInsets.only(bottom: 20,top: 20),
                 child:Text("$counter" ,style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
               ),
@@ -92,7 +92,6 @@ class _sebha extends State<sebha> {
                     s[index],
                     style: TextStyle(color: Colors.white, fontSize: 45),
                   ),
-                  color: Color.fromRGBO(223, 170, 97, 1),
                   padding: EdgeInsets.only(right: 15, left: 15, top: 15),
                   shape: StadiumBorder(),
                   onPressed: (){},
