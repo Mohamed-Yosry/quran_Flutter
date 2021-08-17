@@ -40,6 +40,13 @@ BottomNavigationBar by using bottomNavigationBar in Scafold.
 ### Image for screen
 ![bottom bar](https://user-images.githubusercontent.com/61477146/129481287-0167362e-eb91-434c-bcc0-87a7a443f479.png)
 
+### Image for screen
+![Screenshot_1629236233](https://user-images.githubusercontent.com/61477146/129805036-5ed16d8b-8038-4d3e-b98a-9a4e651be173.png)
+
+### Image for screen
+![Screenshot_1629236276](https://user-images.githubusercontent.com/61477146/129805045-b89754bf-7274-4e7f-96a4-c5fa4f7c772b.png)
+
+
 
 ## Quraan List
 
@@ -81,3 +88,10 @@ we display sowar content by roll
 
 
 ![image](https://user-images.githubusercontent.com/60001834/129487329-90626f1f-e42c-4360-b2f4-25db6f5af93e.png)
+
+## side menu
+### Image for the screen
+![Screenshot_1629236271](https://user-images.githubusercontent.com/61477146/129805161-6edc4607-ff97-4405-9409-b84c04c4dc89.png)
+![Screenshot_1629236283](https://user-images.githubusercontent.com/61477146/129805188-38916d0f-bc88-4047-82d8-fc5e78a3145c.png)
+
+
