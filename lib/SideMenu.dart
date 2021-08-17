@@ -55,6 +55,7 @@ class _SideMenuState extends State<SideMenu> {
                 //Navigator.pop(context);
               },
               child: Container(
+
                 padding: EdgeInsets.symmetric(vertical: 12),
                 child: Text('عربي',textAlign: TextAlign.center,),
               ),

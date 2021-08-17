@@ -24,6 +24,10 @@ class MyThemeData{
         fontSize: 20,
         color: Colors.black,
       ),
+      bodyText2: TextStyle(
+        fontSize: 15,
+        color: Colors.black,
+      ),
     ),
 
 
@@ -53,6 +57,10 @@ class MyThemeData{
       ),
       bodyText1: TextStyle(
         fontSize: 20,
+        color: Colors.yellowAccent,
+      ),
+      bodyText2: TextStyle(
+        fontSize: 15,
         color: Colors.yellowAccent,
       ),
     ),
