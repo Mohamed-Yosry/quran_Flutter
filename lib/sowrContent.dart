@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+
+import 'AppConfigProvider.dart';
 
 class sowerContent extends StatefulWidget {
   String name;
@@ -25,7 +28,7 @@ class _sowerContent extends State<sowerContent> {
     List<String> items = resp.split('\n');
     resp = "";
     for (int i = 0; i < items.length; i++ ){
-      if(items[i] != "") {
+      if(items[i].length > 1 || items[i] == "ص ") {
         resp += items[i];
         resp += "(";
         resp += (i + 1).toString();
@@ -36,17 +39,17 @@ class _sowerContent extends State<sowerContent> {
       data = resp;
     });
   }
+  AppConfigProvider provider;
   @override
   Widget build(BuildContext context) {
-
+    provider = Provider.of<AppConfigProvider>(context);
 
     // TODO: implement build
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(
-                "assets/2.png"),
+            image: provider.isDarkModeEnable()?AssetImage("assets/bg.png"):AssetImage("assets/bg3.png"),
             fit: BoxFit.cover,
           ),
         ),
@@ -64,7 +67,7 @@ class _sowerContent extends State<sowerContent> {
                     ),
                     Expanded(
                       child: Center(
-                        child:Text("اسلامي",style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
+                        child:Text("إسلامي",style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
                       ),
                     ),
                   ],
@@ -73,21 +76,20 @@ class _sowerContent extends State<sowerContent> {
               Container(
                 margin: EdgeInsets.only(bottom: 10,top: 30),
                 child:
-                Text("سورة " + name, style: TextStyle(fontSize: 30,decoration: TextDecoration.underline) ,textAlign: TextAlign.center,),
+                Text("سورة " + name, style:Theme.of(context).textTheme.headline2 ,textAlign: TextAlign.center,),
               ),
               Expanded(
                 child: Container(
                   margin: EdgeInsets.only(right: 15, left: 15, bottom: 50,top: 20),
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(
-                          "assets/bg2.png"),
+                      image: provider.isDarkModeEnable()?AssetImage("assets/Rectangle 3.png"):AssetImage("assets/bg2.png"),
                       fit: BoxFit.cover,
                     ),
                   ),
                   child: SingleChildScrollView(
                       child: Container(margin:EdgeInsets.only(right: 10),
-                          child: Text(data , style: TextStyle(fontSize: 20 ,),textDirection: TextDirection.rtl,))
+                          child: Text(data , style: Theme.of(context).textTheme.bodyText1,textDirection: TextDirection.rtl,))
                   ),
                 ),
               ),

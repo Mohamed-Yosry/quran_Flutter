@@ -5,6 +5,7 @@ import 'package:quran_flutter/sebha.dart';
 import 'AhadeethList.dart';
 import 'AppConfigProvider.dart';
 import 'sowarListPage.dart';
+
 class BottomBar extends StatefulWidget {
 
   @override
@@ -18,8 +19,7 @@ class BottomBarState extends State<BottomBar> {
     SurahsList(),
     sebha(),
     HadeethsList(),
-    //SurahsList(),
-    SideMenu(),
+    SurahsList(),
   ];
 
 
@@ -31,8 +31,24 @@ class BottomBarState extends State<BottomBar> {
 
   @override
   Widget build(BuildContext context) {
+    provider = Provider.of<AppConfigProvider>(context);
     return Scaffold(
-      body: pages[curruntIndex],
+      drawer: SideMenu(),
+      appBar: AppBar(
+        title: Text('Calculator',style: TextStyle(fontSize: 25),textAlign: TextAlign.center,),
+        backgroundColor: Colors.blueGrey,
+      ),
+      body:Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: provider.isDarkModeEnable()?AssetImage(
+                      "assets/bg.png"):AssetImage(
+                      "assets/bg3.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            child:pages[curruntIndex],
+          ),
 
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color.fromRGBO(223, 170, 97, 1),
@@ -69,47 +85,6 @@ class BottomBarState extends State<BottomBar> {
         currentIndex: curruntIndex,
         type: BottomNavigationBarType.fixed,
 
-      ),
-    );
-  }
-}
-
-class SideMenu extends StatefulWidget {
-  @override
-  _SideMenuState createState() => _SideMenuState();
-}
-
-class _SideMenuState extends State<SideMenu> {
-  late AppConfigProvider provider;
-
-  @override
-  Widget build(BuildContext context) {
-    provider = Provider.of<AppConfigProvider>(context);
-    return Drawer(
-      child: Container(
-        padding: EdgeInsets.symmetric(vertical: 48, horizontal: 24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            InkWell(
-              onTap: () {
-                provider.cahngeLanguage('en');
-              },
-              child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 12),
-                  child: Text('en')),
-            ),
-            InkWell(
-              onTap: () {
-                provider.cahngeLanguage("ar");
-              },
-              child: Container(
-                padding: EdgeInsets.symmetric(vertical: 12),
-                child: Text('ar'),
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }

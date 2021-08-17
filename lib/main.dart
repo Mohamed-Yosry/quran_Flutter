@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:quran_flutter/AppConfigProvider.dart';
+import 'package:quran_flutter/MyThemeData.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:quran_flutter/AppConfigProvider.dart';
@@ -14,18 +17,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(create: (buildContext)=> AppConfigProvider(),
-      builder:(buildContext, widget)
-        {
-          final provider = Provider.of<AppConfigProvider>(buildContext);
-          return MaterialApp(
-            locale: Locale.fromSubtags(languageCode: provider.locale),
-            localizationsDelegates: AppLocalizations.localizationsDelegates,
-            supportedLocales: AppLocalizations.supportedLocales,
-            home:BottomBar(),
-          );
-        }
+      builder: (buildContext, Widget)
+      {
+        final provider = Provider.of<AppConfigProvider>(buildContext);
+        return MaterialApp(
+          themeMode: provider.themeMode,
+          theme: MyThemeData.lightTheme,
+          darkTheme: MyThemeData.darkTheme,
+          home:BottomBar(),
+        );
+
+      }
     );
-
-
   }
 }
