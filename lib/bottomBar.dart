@@ -62,8 +62,7 @@ class BottomBarState extends State<BottomBar> {
           BottomNavigationBarItem(
               icon: Image.asset("assets/radio.png"),
               // ignore: deprecated_member_use
-              title:Text(AppLocalizations.of(context)!.radio
-                  ,style:Theme.of(context).textTheme.bodyText1),
+              title:Text(AppLocalizations.of(context)!.radio,style:Theme.of(context).textTheme.bodyText1),
               //label: 'ssss',
               activeIcon: Image.asset("assets/radio.png",color: Theme.of(context).iconTheme.color,)
 
@@ -94,8 +93,7 @@ class BottomBarState extends State<BottomBar> {
 
           BottomNavigationBarItem(
               icon: Icon(Icons.settings,color: Colors.white70,size: 50,),
-              title:Text(AppLocalizations.of(context)!.settings
-                  ,style:Theme.of(context).textTheme.bodyText1),
+              title:Text(AppLocalizations.of(context)!.settings,style:Theme.of(context).textTheme.bodyText1),
               activeIcon: Icon(Icons.settings,/*color: Colors.black87,*/size: 50,)
           ),
 
