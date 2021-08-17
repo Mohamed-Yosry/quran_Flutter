@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class sebha extends StatefulWidget {
 
@@ -40,7 +41,8 @@ class _sebha extends State<sebha> {
                 margin: EdgeInsets.only(right: 10,top:25,bottom: 30),
                 child:
                   Center(
-                      child:Text("اسلامي",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                      child:Text(AppLocalizations.of(context)!.islamy,
+                        style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
                     ),
               ),
               Container(
@@ -60,7 +62,8 @@ class _sebha extends State<sebha> {
               ),
               Container(
                 margin: EdgeInsets.only(bottom: 10,top: 20),
-                child:Text("عدد التسبيحات",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                child:Text(AppLocalizations.of(context)!.tasbeehCounter,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
               ),
               Container(
                 width: 50, height: 50,
@@ -72,6 +75,7 @@ class _sebha extends State<sebha> {
         Container(
           padding: EdgeInsets.only(bottom: 10),
           child: RaisedButton(
+            onPressed: null,
                   child: Text(
                     s[index],
                     style: TextStyle(color: Colors.white, fontSize: 45),
