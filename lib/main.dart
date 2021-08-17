@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:quran_flutter/AppConfigProvider.dart';
 import 'package:quran_flutter/MyThemeData.dart';
@@ -7,7 +8,7 @@ import 'package:provider/provider.dart';
 import 'package:quran_flutter/AppConfigProvider.dart';
 
 import 'bottomBar.dart';
-
+//import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 void main() {
   runApp(MyApp());
 }
@@ -32,5 +33,7 @@ class MyApp extends StatelessWidget {
 
       }
     );
+
+
   }
 }

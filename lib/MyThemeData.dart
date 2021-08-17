@@ -6,8 +6,14 @@ import 'package:flutter/material.dart';
 class MyThemeData{
   static final lightTheme = ThemeData(
     brightness: Brightness.light,
+   colorScheme: ColorScheme.light(),
 
-    bottomNavigationBarTheme: BottomNavigationBarThemeData( backgroundColor: Color.fromRGBO(223, 170, 97, 1)),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: Color.fromRGBO(223, 170, 97, 1),
+      selectedIconTheme: IconThemeData(
+        color: Colors.black,
+      ),
+    ),
 
     textTheme: TextTheme(
       headline2: TextStyle(
@@ -19,6 +25,10 @@ class MyThemeData{
         fontSize: 20,
         color: Colors.black,
       ),
+      bodyText2: TextStyle(
+        fontSize: 15,
+        color: Colors.black,
+      ),
     ),
 
       accentColor: Color.fromRGBO(201, 179, 150, 1),
@@ -27,10 +37,19 @@ class MyThemeData{
   );
 
   static final darkTheme = ThemeData(
-
     brightness: Brightness.dark,
 
-    bottomNavigationBarTheme: BottomNavigationBarThemeData( backgroundColor: Color.fromRGBO(8, 19, 61, 1.0)),
+    iconTheme: IconThemeData(
+      color: Colors.yellowAccent,
+    ),
+
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+
+        backgroundColor: Color.fromRGBO(8, 19, 61, 1.0),
+        selectedIconTheme: IconThemeData(
+          color: Colors.yellowAccent,
+        )
+        ),
 
     textTheme: TextTheme(
       headline2: TextStyle(
@@ -40,6 +59,10 @@ class MyThemeData{
       ),
       bodyText1: TextStyle(
         fontSize: 20,
+        color: Colors.yellowAccent,
+      ),
+      bodyText2: TextStyle(
+        fontSize: 15,
         color: Colors.yellowAccent,
       ),
     ),

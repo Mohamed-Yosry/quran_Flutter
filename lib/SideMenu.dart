@@ -14,19 +14,20 @@ class _SideMenuState extends State<SideMenu> {
   @override
   Widget build(BuildContext context) {
     provider = Provider.of<AppConfigProvider>(context);
-    return Drawer(
-      child: Container(
-        padding: EdgeInsets.symmetric(vertical: 48, horizontal: 24),
+    return  Container(
+
+        alignment: Alignment.center,
+        //padding: EdgeInsets.symmetric(vertical: 75, horizontal: 100),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          //crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             InkWell(
               onTap: (){
                 changeLanguage();
               },
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 12),
-                  child: Text('language')),
+                padding: EdgeInsets.symmetric(vertical: 40,),
+                  child: Text('language',textAlign: TextAlign.center,style: TextStyle(fontSize: 30),)),
             ),
             InkWell(
               onTap: (){
@@ -34,7 +35,7 @@ class _SideMenuState extends State<SideMenu> {
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 12),
-                  child: Text('theme'),
+                  child: Text('theme',textAlign: TextAlign.center,style: TextStyle(fontSize: 30),),
                 ),
             ),
           ],
@@ -43,7 +44,7 @@ class _SideMenuState extends State<SideMenu> {
     );
   }
   void changeLanguage() {
-    Navigator.pop(context);
+    //Navigator.pop(context);
     showModalBottomSheet(context: context, builder: (buildContext){
       return Container(
         child: Column(
@@ -51,15 +52,20 @@ class _SideMenuState extends State<SideMenu> {
           children: [
             InkWell(
               onTap: (){
+                changeTheme();
+                //Navigator.pop(context);
                 provider.cahngeLanguage('ar');
               },
               child: Container(
+
                 padding: EdgeInsets.symmetric(vertical: 12),
                 child: Text('عربي',textAlign: TextAlign.center,),
               ),
             ),
             InkWell(
               onTap: (){
+                changeTheme();
+                //Navigator.pop(context);
                 provider.cahngeLanguage('en');
               },
               child: Container(
@@ -74,7 +80,7 @@ class _SideMenuState extends State<SideMenu> {
   }
 
   void changeTheme() {
-    Navigator.pop(context);
+    //Navigator.pop(context);
     showModalBottomSheet(context: context, builder: (buildContext){
       return Container(
         child: Column(
@@ -84,6 +90,7 @@ class _SideMenuState extends State<SideMenu> {
               onTap: (){
                 if(provider.isDarkModeEnable())
                   provider.toggleTheme();
+                //Navigator.pop(context);
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 12),
@@ -94,6 +101,7 @@ class _SideMenuState extends State<SideMenu> {
               onTap: (){
                 if(!provider.isDarkModeEnable())
                   provider.toggleTheme();
+                //Navigator.pop(context);
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 12),
