@@ -79,7 +79,6 @@ change the "Zekr" on every pressed on the sebha
 ### sower content
 
 we display sowar content by roll
-![image](https://user-images.githubusercontent.com/60001834/129487277-8eff7790-4dc1-4fd6-a471-0ac19fa94758.png)
 ![Screenshot_1629236258](https://user-images.githubusercontent.com/61477146/129805483-ff53da7a-6c5e-442e-8d85-7d807279ca7d.png)
 ![Screenshot_1629237098](https://user-images.githubusercontent.com/61477146/129805486-883f5d9a-3637-4e6e-b941-f0e1cbfabdbd.png)
 
@@ -92,6 +91,8 @@ we display sowar content by roll
 
 
 ![image](https://user-images.githubusercontent.com/60001834/129487329-90626f1f-e42c-4360-b2f4-25db6f5af93e.png)
+![Screenshot_1629237167](https://user-images.githubusercontent.com/61477146/129805659-26ed3e1a-6408-4c4f-b9b6-eb56beafa547.png)
+
 
 ## side menu
 ### Image for the screen
