@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyThemeData{
@@ -20,9 +21,13 @@ class MyThemeData{
       ),
     ),
 
+      accentColor: Color.fromRGBO(201, 179, 150, 1),
+      buttonColor:  Color.fromRGBO(183, 143, 95, 1)
+
   );
 
   static final darkTheme = ThemeData(
+
     brightness: Brightness.dark,
 
     bottomNavigationBarTheme: BottomNavigationBarThemeData( backgroundColor: Color.fromRGBO(8, 19, 61, 1.0)),
@@ -38,6 +43,10 @@ class MyThemeData{
         color: Colors.yellowAccent,
       ),
     ),
+
+      accentColor: Color.fromRGBO(21, 27, 49, 1),
+
+      buttonColor: Color.fromRGBO(250, 204, 29, 1),
 
   );
 

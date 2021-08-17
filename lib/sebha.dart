@@ -5,6 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
+import 'package:provider/provider.dart';
+
+import 'AppConfigProvider.dart';
+
 class sebha extends StatefulWidget {
 
   sebha();
@@ -15,6 +19,11 @@ class sebha extends StatefulWidget {
   }
 }
 
+  ThemeData x1(){
+
+  return ThemeData(accentColor: Colors.black);
+}
+
 class _sebha extends State<sebha> {
   int counter = 0;
   List<String> s = ["سبحان الله","الله أكبر","الحمد لله"];
@@ -22,22 +31,25 @@ class _sebha extends State<sebha> {
   _sebha();
 
   @override
-  Widget build(BuildContext context) {
+    AppConfigProvider provider;
+    @override
+    Widget build(BuildContext context) {
+      provider = Provider.of<AppConfigProvider>(context);
 
     // TODO: implement build
     return Scaffold(
+
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(
-                "assets/bg3.png"),
+            image: provider.isDarkModeEnable()?AssetImage("assets/bg.png"):AssetImage("assets/bg3.png"),
             fit: BoxFit.cover,
           ),
         ),
         child: Column(
             children:[
               Container(
-                margin: EdgeInsets.only(right: 10,top:25,bottom: 30),
+                margin: EdgeInsets.only(right: 10,top:4,bottom: 30),
                 child:
                   Center(
                       child:Text("اسلامي",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
@@ -47,9 +59,9 @@ class _sebha extends State<sebha> {
                 padding: EdgeInsets.all(0),
                 child: Column(
                   children: [
-                    Padding(padding: EdgeInsets.only(left: 30,bottom:0),child:Image.asset("assets/sebhaHead.png",width: 80,height:80,)),
+                    Padding(padding: EdgeInsets.only(left: 30,bottom:0),child:provider.isDarkModeEnable()?Image.asset("assets/headofseb7a.png",width: 80,height:80,):Image.asset("assets/sebhaHead.png",width: 80,height:80,)),
                     new RotatedBox(
-                      child: IconButton(icon: Image.asset("assets/sebhaBody.png"),onPressed: () {
+                      child: IconButton(icon: provider.isDarkModeEnable()? Image.asset("assets/bodyofseb7a.png"):Image.asset("assets/sebhaBody.png"),onPressed: () {
                         increament();
                       },iconSize: 200,),
                       quarterTurns: counter,
@@ -59,14 +71,19 @@ class _sebha extends State<sebha> {
 
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 10,top: 20),
+                margin: EdgeInsets.only(bottom: 10,top: 4),
                 child:Text("عدد التسبيحات",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
               ),
               Container(
+                decoration:BoxDecoration(
+                border: Border.all(),
+                   borderRadius: BorderRadius.all(Radius.circular(12)),
+                    color: Theme.of(context).accentColor,
+                      ),
+
                 width: 50, height: 50,
                 alignment: Alignment.center,
-                color: Color.fromRGBO(250, 215, 160, 1),
-                margin: EdgeInsets.only(bottom: 20,top: 20),
+                margin: EdgeInsets.only(bottom: 20,top: 4),
                 child:Text("$counter" ,style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
               ),
         Container(
@@ -74,11 +91,11 @@ class _sebha extends State<sebha> {
           child: RaisedButton(
                   child: Text(
                     s[index],
-                    style: TextStyle(color: Colors.white, fontSize: 45),
+                    style: TextStyle(color: Colors.white, fontSize: 28),
                   ),
-                  color: Color.fromRGBO(223, 170, 97, 1),
-                  padding: EdgeInsets.only(right: 15, left: 15, top: 15),
+                  padding: EdgeInsets.only(right: 15, left: 15, top: 2),
                   shape: StadiumBorder(),
+                  onPressed: (){},
                 ),
               )
             ]
