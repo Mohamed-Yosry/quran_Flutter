@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'AppConfigProvider.dart';
 
 class ahadethContent extends StatefulWidget {
   String name;
@@ -27,8 +31,10 @@ class _ahadethContent extends State<ahadethContent> {
       data = resp;
     });
   }
+  late AppConfigProvider provider;
   @override
   Widget build(BuildContext context) {
+    provider = Provider.of<AppConfigProvider>(context);
 
 
     // TODO: implement build
@@ -36,8 +42,7 @@ class _ahadethContent extends State<ahadethContent> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(
-                "assets/2.png"),
+            image: provider.isDarkModeEnable()?AssetImage("assets/bg.png"):AssetImage("assets/bg3.png"),
             fit: BoxFit.cover,
           ),
         ),
@@ -55,7 +60,7 @@ class _ahadethContent extends State<ahadethContent> {
                     ),
                     Expanded(
                       child: Center(
-                        child:Text("اسلامي",style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
+                        child:Text(AppLocalizations.of(context)!.islamy,style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
                       ),
                     ),
                   ],
@@ -64,21 +69,20 @@ class _ahadethContent extends State<ahadethContent> {
               Container(
                 margin: EdgeInsets.only(bottom: 10,top: 30),
                 child:
-                Text(name, style: TextStyle(fontSize: 30, decoration: TextDecoration.underline,) ,textAlign: TextAlign.center,),
+                Text(name, style: Theme.of(context).textTheme.headline2 ,textAlign: TextAlign.center,),
               ),
               Expanded(
                 child: Container(
                   margin: EdgeInsets.only(right: 15, left: 15, bottom: 50,top: 20),
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(
-                          "assets/bg2.png"),
+                      image: provider.isDarkModeEnable()?AssetImage("assets/Rectangle 3.png"):AssetImage("assets/bg2.png"),
                       fit: BoxFit.cover,
                     ),
                   ),
                   child: SingleChildScrollView(
                       child: Container(margin:EdgeInsets.only(right: 10),
-                          child: Text(data , style: TextStyle(fontSize: 20 ,),textDirection: TextDirection.rtl,))
+                          child: Text(data , style: Theme.of(context).textTheme.bodyText1, textDirection: TextDirection.rtl,))
                   ),
                 ),
               ),

@@ -1,80 +1,28 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'ahadethContent.dart';
 
 class HadeethsList extends StatelessWidget {
   int hadeethNum=0;
-  List<Hadeeth> AHadeeths=[new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-  ];
+  List<Hadeeth> AHadeeths=[];
 
   @override
   Widget build(BuildContext context) {
+    AHadeeths.clear();
+
+   for(int i=1;i<51;i++)
+   {
+      AHadeeths.add(new Hadeeth(AppLocalizations.of(context)!.hadeethName+" "));
+    }
     return new Stack(
         children:[
-          new Container(
-            decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(
-                "assets/2.png"),
-                 fit: BoxFit.cover,
-              ),
-             ),
-          ),
           new Column(
               children: [
                 new Container(
                   padding: EdgeInsets.only(top:30, bottom: 40),
-                  child: new Text("إسلامي",style: TextStyle(fontSize: 30, color: Colors.black), textAlign: TextAlign.center,),
-                  alignment: Alignment.center,
+                  child: new Text(AppLocalizations.of(context)!.islamy,
+                    style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
+                    alignment: Alignment.center,
                 ),
                 new Container(
                   height: 200.0,
@@ -91,13 +39,14 @@ class HadeethsList extends StatelessWidget {
                   margin: EdgeInsets.only(top: 30),
                   height: 45,
                   //alignment: Alignment.center,
-                  decoration: BoxDecoration(border: Border(top: BorderSide(color: Colors.orange, width: 2),
-                      bottom: BorderSide(color: Colors.orange, width: 2))),
+                  decoration: BoxDecoration(border: Border(top: BorderSide(color: Theme.of(context).accentColor, width: 2),
+                      bottom: BorderSide(color: Theme.of(context).accentColor, width: 2))),
                   child: new Row (
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                        new Text("الأحاديث",textDirection: TextDirection.rtl, style: new TextStyle(
-                                  fontSize: 23, color: Colors.black,), textAlign: TextAlign.center,),
+                        new Text(AppLocalizations.of(context)!.ahadeeth_theTitle,
+                          textDirection: TextDirection.rtl, style: new TextStyle(
+                          fontSize: 23), textAlign: TextAlign.center,),
                       ],
                   )
 
