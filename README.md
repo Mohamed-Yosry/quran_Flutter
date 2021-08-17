@@ -1,3 +1,5 @@
+![bottom bar](https://user-images.githubusercontent.com/61477146/129804894-c9c41952-5819-4e58-8c16-3b24d08925da.png)
+![Screenshot_1629236233](https://user-images.githubusercontent.com/61477146/129804910-75c2860c-d999-4d89-b9e4-eea844f0a501.png)
 
 # quran_flutter
 
