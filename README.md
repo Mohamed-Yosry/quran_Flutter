@@ -72,12 +72,17 @@ Usded (RotatedBox) widget for rottation of sebhaBody img
 change the "Zekr" on every pressed on the sebha
 
 ### Image for the screen
-![Screenshot_1629045007](https://user-images.githubusercontent.com/61477146/129485586-265a3d98-ffea-4ee3-80bb-7587d9d97491.png)
+![Screenshot_1629237013](https://user-images.githubusercontent.com/61477146/129805389-38a86761-d190-459e-980b-d54987d9487d.png)
+![Screenshot_1629236264](https://user-images.githubusercontent.com/61477146/129805400-07644c14-e2a0-4adf-88f4-875d4070a092.png)
+
 
 ### sower content
 
 we display sowar content by roll
 ![image](https://user-images.githubusercontent.com/60001834/129487277-8eff7790-4dc1-4fd6-a471-0ac19fa94758.png)
+![Screenshot_1629236258](https://user-images.githubusercontent.com/61477146/129805483-ff53da7a-6c5e-442e-8d85-7d807279ca7d.png)
+![Screenshot_1629237098](https://user-images.githubusercontent.com/61477146/129805486-883f5d9a-3637-4e6e-b941-f0e1cbfabdbd.png)
+
 
 
 
