@@ -54,7 +54,8 @@ BottomNavigationBar by using bottomNavigationBar in Scafold.
 * the header of the page with the title and a photo in a Column Widget.
 
 ### Image for the screen
-<img src="https://user-images.githubusercontent.com/45634921/129483294-8b489110-ae5d-438a-ae53-2c6fefc27b8b.jpg" alt="drawing" width="200"/>
+![Screenshot_1629236253](https://user-images.githubusercontent.com/61477146/129805817-ddeb6ba9-114f-4486-93ca-35ea9a66fc12.png)
+![Screenshot_1629236293](https://user-images.githubusercontent.com/61477146/129805825-9fb721cd-22f7-498c-90e5-a39fe7f78f4d.png)
 
 
 ## Ahadeeth List
@@ -64,7 +65,9 @@ BottomNavigationBar by using bottomNavigationBar in Scafold.
 * the header of the page with the title and a photo in a Column Widget.
 
 ### Image for the screen
-<img src="https://user-images.githubusercontent.com/45634921/129483574-bd641658-f8d6-4dae-b6c9-2d09c6a5e288.jpg" alt="drawing" width="200"/>
+![Screenshot_1629236297](https://user-images.githubusercontent.com/61477146/129805889-3792e101-b8fd-436f-b575-16f5020781f9.png)
+![Screenshot_1629237341](https://user-images.githubusercontent.com/61477146/129805898-4676c996-4131-439e-b6be-08e8c059e765.png)
+
 
 
 ## Sebha Screen
