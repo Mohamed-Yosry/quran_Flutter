@@ -82,7 +82,7 @@ class _ahadethContent extends State<ahadethContent> {
                   ),
                   child: SingleChildScrollView(
                       child: Container(margin:EdgeInsets.only(right: 10),
-                          child: Text(data , style: Theme.of(context).textTheme.bodyText1, textDirection: TextDirection.rtl,))
+                          child: Text(data , style: Theme.of(context).textTheme.headline4, textDirection: TextDirection.rtl,))
                   ),
                 ),
               ),
