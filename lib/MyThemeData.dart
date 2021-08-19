@@ -22,10 +22,14 @@ class MyThemeData{
           decoration: TextDecoration.underline
       ),
       bodyText1: TextStyle(
-        fontSize: 20,
+        fontSize: 12,
         color: Colors.black,
       ),
 
+        headline4 : TextStyle(
+          fontSize: 20,
+          color: Colors.black,
+        )
     ),
 
       accentColor: Color.fromRGBO(183, 147, 95, 1),
@@ -59,6 +63,10 @@ class MyThemeData{
         color: Colors.yellowAccent,
       ),
 
+        headline4: TextStyle(
+          fontSize: 20,
+          color:  Color.fromRGBO(250, 204, 29, 1),
+        )
     ),
 
       accentColor: Color.fromRGBO(250, 204, 29, 1),

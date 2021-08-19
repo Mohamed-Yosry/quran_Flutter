@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'ahadethContent.dart';
 
@@ -19,24 +20,25 @@ class HadeethsList extends StatelessWidget {
           new Column(
               children: [
                 new Container(
-                  padding: EdgeInsets.only(top:30, bottom: 40),
+                  padding: EdgeInsets.only(top:30, bottom: 0),
                   child: new Text(AppLocalizations.of(context)!.islamy,
                     style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
                     alignment: Alignment.center,
                 ),
                 new Container(
-                  height: 200.0,
-                  width: 300.0,
+                 // padding: EdgeInsets.only(top:0),
+                  height: 219.0,
+                  width: 312.0,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                     image: AssetImage('assets/img.png'),
                     fit: BoxFit.fill,
                   ),
-                 shape: BoxShape.circle,
+                // shape: BoxShape.circle,
                   ),
                 ),
                 new Container(
-                  margin: EdgeInsets.only(top: 30),
+                  margin: EdgeInsets.only(top: 0),
                   height: 45,
                   //alignment: Alignment.center,
                   decoration: BoxDecoration(border: Border(top: BorderSide(color: Theme.of(context).accentColor, width: 2),
@@ -54,11 +56,15 @@ class HadeethsList extends StatelessWidget {
 
                 new Expanded(
                   child: ListView.builder(
+                    padding: EdgeInsets.all(0),
                     itemCount: AHadeeths.length,
                     itemBuilder: (context, index){
                       hadeethNum=index+1;
                       return Card(
-                        child: ListTile
+                          elevation: 0,
+                          color: Colors.transparent,
+                          margin: EdgeInsets.all(0),
+                          child: ListTile
                           (
                             onTap: (){
                               Navigator.push(context, MaterialPageRoute(builder:(BuildContext context){

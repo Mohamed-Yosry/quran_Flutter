@@ -144,7 +144,7 @@ class SurahsList extends StatelessWidget {
                   width: 200.0,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/logoImage.jpeg'),
+                      image: AssetImage('assets/logoImage.png'),
                       fit: BoxFit.fill,
                     ),
                     shape: BoxShape.circle,
@@ -154,6 +154,8 @@ class SurahsList extends StatelessWidget {
                   height: 45,
                   decoration: BoxDecoration(border: Border(top: BorderSide(color: Theme.of(context).accentColor, width: 2),
                       bottom: BorderSide(color: Theme.of(context).accentColor, width: 2))),
+
+
                   child:new
                   Row(
                     children: [
@@ -163,7 +165,7 @@ class SurahsList extends StatelessWidget {
                           decoration: BoxDecoration(border: Border(right: BorderSide(color: Theme.of(context).accentColor, width: 2))),
                           child: new Text(AppLocalizations.of(context)!.ayaatCounter,
                               textDirection: TextDirection.rtl, style: new TextStyle(
-                                fontSize: 20,
+                                fontSize: 25,
                               )),
                         ),
                       ),
@@ -171,7 +173,7 @@ class SurahsList extends StatelessWidget {
                         child: new Container(
                           child: new Text(AppLocalizations.of(context)!.surahName,
                               textDirection: TextDirection.rtl, style: new TextStyle(
-                                fontSize: 20,
+                                fontSize: 25,
                               )),
                           alignment: Alignment.center,
                         ),
@@ -181,6 +183,7 @@ class SurahsList extends StatelessWidget {
                 ),
                 new Expanded(
                   child: GridView(
+                    padding: EdgeInsets.all(0),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 1,
                       mainAxisExtent: 30,
