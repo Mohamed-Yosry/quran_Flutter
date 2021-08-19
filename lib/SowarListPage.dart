@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'sowrContent.dart';
+import 'SowrContent.dart';
 
 
 class SurahsList extends StatelessWidget {
@@ -165,7 +165,7 @@ class SurahsList extends StatelessWidget {
                           decoration: BoxDecoration(border: Border(right: BorderSide(color: Theme.of(context).accentColor, width: 2))),
                           child: new Text(AppLocalizations.of(context)!.ayaatCounter,
                               textDirection: TextDirection.rtl, style: new TextStyle(
-                                fontSize: 25,
+                                fontSize: 20,
                               )),
                         ),
                       ),
@@ -173,7 +173,7 @@ class SurahsList extends StatelessWidget {
                         child: new Container(
                           child: new Text(AppLocalizations.of(context)!.surahName,
                               textDirection: TextDirection.rtl, style: new TextStyle(
-                                fontSize: 25,
+                                fontSize: 20,
                               )),
                           alignment: Alignment.center,
                         ),
@@ -192,7 +192,7 @@ class SurahsList extends StatelessWidget {
                         onPressed: (){
                           String s = findNo(surahs, e);
                           Navigator.push(context, MaterialPageRoute(builder:(BuildContext context){
-                            return sowerContent(e.surahName, s);
+                            return SowerContent(e.surahName, s);
                           }
                           ));
                         },
