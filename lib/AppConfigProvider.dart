@@ -74,4 +74,18 @@ class AppConfigProvider extends ChangeNotifier{
     _saveToPrefs();
     notifyListeners();
   }
+
+  int getLanguage(){
+
+    if(locale=="ar"){
+      return 1;
+    }
+    else if(locale=="en"){
+      return 2;
+
+    }
+
+    return 0;
+  }
 }
+
