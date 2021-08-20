@@ -10,9 +10,9 @@ import 'package:provider/provider.dart';
 
 import 'AppConfigProvider.dart';
 
-class sebha extends StatefulWidget {
+class Sebha extends StatefulWidget {
 
-  sebha();
+  Sebha();
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -20,7 +20,7 @@ class sebha extends StatefulWidget {
   }
 }
 
-class _sebha extends State<sebha> {
+class _sebha extends State<Sebha> {
   int counter = 0;
   List<String> s = ["سبحان الله","الله أكبر","الحمد لله"];
   int index = 0;

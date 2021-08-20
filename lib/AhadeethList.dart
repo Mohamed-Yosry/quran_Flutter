@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'ahadethContent.dart';
+import 'AhadethContent.dart';
 
 class HadeethsList extends StatelessWidget {
   int hadeethNum=0;
@@ -68,7 +68,7 @@ class HadeethsList extends StatelessWidget {
                           (
                             onTap: (){
                               Navigator.push(context, MaterialPageRoute(builder:(BuildContext context){
-                                return ahadethContent(AHadeeths[index].HadeethName+" "+(index+1).toString(), index);
+                                return AhadethContent(AHadeeths[index].HadeethName+" "+(index+1).toString(), index);
                               }
                               ));
 
