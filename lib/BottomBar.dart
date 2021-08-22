@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quran_flutter/SideMenu.dart';
 import 'package:quran_flutter/Sebha.dart';
+import 'radio_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'AhadeethList.dart';
 import 'AppConfigProvider.dart';
@@ -16,13 +17,14 @@ class BottomBar extends StatefulWidget {
 class BottomBarState extends State<BottomBar> {
 
 
-  int curruntIndex = 3;
+  int curruntIndex = 4;
   final List <Widget> pages=[
-    SurahsList(),
+    SideMenu(),
+    RadioChannel(),
     Sebha(),
     HadeethsList(),
-    SurahsList(),
-    SideMenu()
+    SurahsList()
+
   ];
 
 
@@ -58,6 +60,12 @@ class BottomBarState extends State<BottomBar> {
             label: 'add',
           ),*/
           BottomNavigationBarItem(
+              icon: Icon(Icons.settings,color: Colors.white70,size: 30,),
+              title:Text(AppLocalizations.of(context)!.settings,style:Theme.of(context).textTheme.headline3),
+              activeIcon: Icon(Icons.settings,/*color: Colors.black87,*/size: 30,)
+          ),
+
+          BottomNavigationBarItem(
               icon: Image.asset("assets/radio.png",width: 35),
               // ignore: deprecated_member_use
               title:Text(AppLocalizations.of(context)!.radio,style:Theme.of(context).textTheme.headline3),
@@ -89,11 +97,6 @@ class BottomBarState extends State<BottomBar> {
               activeIcon: Image.asset("assets/quran.png",color: Theme.of(context).iconTheme.color,width: 35,)
           ),
 
-          BottomNavigationBarItem(
-              icon: Icon(Icons.settings,color: Colors.white70,size: 30,),
-              title:Text(AppLocalizations.of(context)!.settings,style:Theme.of(context).textTheme.headline3),
-              activeIcon: Icon(Icons.settings,/*color: Colors.black87,*/size: 30,)
-          ),
 
         ],
         onTap: inc,
