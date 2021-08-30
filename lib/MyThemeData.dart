@@ -30,8 +30,12 @@ class MyThemeData {
             fontSize: 20,
             color: Colors.black,
           )),
+
       accentColor: Color.fromRGBO(183, 147, 95, 1),
-      buttonColor: Color.fromRGBO(183, 147, 95, 1));
+      buttonColor: Color.fromRGBO(183, 147, 95, 1),
+    splashColor: Color.fromARGB(200, 120, 150,1),
+
+  );
 
   static final darkTheme = ThemeData(
     brightness: Brightness.dark,
@@ -62,5 +66,6 @@ class MyThemeData {
         )),
     accentColor: Color.fromRGBO(250, 204, 29, 1),
     buttonColor: Color.fromRGBO(250, 204, 29, 1),
+     splashColor: Color.fromARGB(21, 27, 49,1)
   );
 }

@@ -77,7 +77,7 @@ class _sebha extends State<Sebha> {
                 border: Border.all(),
                    borderRadius: BorderRadius.all(Radius.circular(12)),
 
-                    color: Theme.of(context).accentColor,
+                    color: Theme.of(context).splashColor,
                       ),
 
                 width: 50, height: 50,
