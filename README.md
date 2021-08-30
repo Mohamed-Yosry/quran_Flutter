@@ -99,4 +99,9 @@ we display sowar content by roll
 ![Screenshot_1629236271](https://user-images.githubusercontent.com/61477146/129805161-6edc4607-ff97-4405-9409-b84c04c4dc89.png)
 ![Screenshot_1629236283](https://user-images.githubusercontent.com/61477146/129805188-38916d0f-bc88-4047-82d8-fc5e78a3145c.png)
 
+## Radio
+### Image for the screen
+![Screenshot_1630281474](https://user-images.githubusercontent.com/61477146/131269862-2e07df9b-874a-4774-bc36-1b9bcb1f94e3.png)
+![Screenshot_1630281559](https://user-images.githubusercontent.com/61477146/131269866-1b0a126d-f9b8-4ca0-adcc-147c9c313c87.png)
+
 
