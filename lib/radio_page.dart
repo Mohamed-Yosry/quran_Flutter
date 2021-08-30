@@ -13,6 +13,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:provider/provider.dart';
 
 import 'AppConfigProvider.dart';
+import 'package:http/http.dart' as http;
 
 class RadioChannel extends StatefulWidget {
 
@@ -26,6 +27,7 @@ class RadioChannel extends StatefulWidget {
 
 class _RadioChannel extends State< RadioChannel> with WidgetsBindingObserver {
       int index=0;
+
 
   _RadioChannel();
 
@@ -83,6 +85,7 @@ class _RadioChannel extends State< RadioChannel> with WidgetsBindingObserver {
   /// feature of rx_dart to combine the 3 streams of interest into one.
   Stream<PositionData> get _positionDataStream =>
       Rx.combineLatest3<Duration, Duration, Duration?, PositionData>(
+
           _player.positionStream,
           _player.bufferedPositionStream,
           _player.durationStream,
@@ -146,7 +149,9 @@ class _RadioChannel extends State< RadioChannel> with WidgetsBindingObserver {
                     },iconSize: 100,),
                      IconButton(icon:  provider.isDarkModeEnable()? Image.asset("assets/playDark.png"):Image.asset("assets/play.png")
                        ,onPressed: () {
+
                          _player.play();
+
                        },iconSize: 100,),
                      IconButton(icon:  provider.isDarkModeEnable()? Image.asset("assets/preDark.png"):Image.asset("assets/previos1.png")
                        ,onPressed: () {
@@ -172,7 +177,36 @@ class _RadioChannel extends State< RadioChannel> with WidgetsBindingObserver {
 
   List<String> s = ["http://live.mp3quran.net:9702/"
                    ,"http://live.mp3quran.net:9718/"
-                   ,"http://live.mp3quran.net:9992/"];
+                   ,"http://live.mp3quran.net:9992/"
+                   ,"http://live.mp3quran.net:8006/"
+                   ,"http://live.mp3quran.net:9698/"
+                   ,"http://live.mp3quran.net:9722/"
+                   ,"http://live.mp3quran.net:9870/"
+                   ,"http://live.mp3quran.net:9862/"
+                   ,"http://live.mp3quran.net:9868/"
+                   ,"http://live.mp3quran.net:9980/"
+                   ,"http://live.mp3quran.net:9974/"
+                  ,"http://live.mp3quran.net:9956/"
+                  ,"http://live.mp3quran.net:9850/"
+                  ,"http://live.mp3quran.net:9944/"
+                  ,"http://live.mp3quran.net:9860/"
+                  ,"http://live.mp3quran.net:9704/"
+                  ,"http://live.mp3quran.net:9858/"
+                  ,"http://live.mp3quran.net:9706/"
+                 ,"http://live.mp3quran.net:9954/"
+                 ,"http://live.mp3quran.net:9948/"
+                 ,"http://live.mp3quran.net:9852/"
+                 ,"http://live.mp3quran.net:9856/"
+                 ,"http://live.mp3quran.net:9854/"
+                 ,"http://live.mp3quran.net:9726/"
+                 ,"http://live.mp3quran.net:9988/"
+                 ,"http://live.mp3quran.net:9866/"
+                 ,"http://live.mp3quran.net:9864/"
+                 ,"http://live.mp3quran.net:9848/"
+                 ,"http://live.mp3quran.net:9916/"
+                 ,"http://live.mp3quran.net:9874/"
+                 ,"http://live.mp3quran.net:9872/"
+                 ,"http://live.mp3quran.net:8008/"];
 
 
 
