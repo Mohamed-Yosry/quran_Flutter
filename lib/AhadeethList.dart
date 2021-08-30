@@ -1,103 +1,54 @@
 import 'package:flutter/material.dart';
-
-import 'ahadethContent.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'AhadethContent.dart';
 
 class HadeethsList extends StatelessWidget {
   int hadeethNum=0;
-  List<Hadeeth> AHadeeths=[new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-    new Hadeeth('الحديث رقم'),
-  ];
+  List<Hadeeth> AHadeeths=[];
 
   @override
   Widget build(BuildContext context) {
+    AHadeeths.clear();
+
+   for(int i=1;i<51;i++)
+   {
+      AHadeeths.add(new Hadeeth(AppLocalizations.of(context)!.hadeethName+" "));
+    }
     return new Stack(
         children:[
-          new Container(
-            decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(
-                "assets/2.png"),
-                 fit: BoxFit.cover,
-              ),
-             ),
-          ),
           new Column(
               children: [
                 new Container(
-                  padding: EdgeInsets.only(top:30, bottom: 40),
-                  child: new Text("إسلامي",style: TextStyle(fontSize: 30, color: Colors.black), textAlign: TextAlign.center,),
-                  alignment: Alignment.center,
+                  padding: EdgeInsets.only(top:30, bottom: 0),
+                  child: new Text(AppLocalizations.of(context)!.islamy,
+                    style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
+                    alignment: Alignment.center,
                 ),
                 new Container(
-                  height: 200.0,
-                  width: 300.0,
+                 // padding: EdgeInsets.only(top:0),
+                  height: 219.0,
+                  width: 312.0,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                     image: AssetImage('assets/img.png'),
                     fit: BoxFit.fill,
                   ),
-                 shape: BoxShape.circle,
+                // shape: BoxShape.circle,
                   ),
                 ),
                 new Container(
-                  margin: EdgeInsets.only(top: 30),
+                  margin: EdgeInsets.only(top: 0),
                   height: 45,
                   //alignment: Alignment.center,
-                  decoration: BoxDecoration(border: Border(top: BorderSide(color: Colors.orange, width: 2),
-                      bottom: BorderSide(color: Colors.orange, width: 2))),
+                  decoration: BoxDecoration(border: Border(top: BorderSide(color: Theme.of(context).accentColor, width: 2),
+                      bottom: BorderSide(color: Theme.of(context).accentColor, width: 2))),
                   child: new Row (
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                        new Text("الأحاديث",textDirection: TextDirection.rtl, style: new TextStyle(
-                                  fontSize: 23, color: Colors.black,), textAlign: TextAlign.center,),
+                        new Text(AppLocalizations.of(context)!.ahadeeth_theTitle,
+                          textDirection: TextDirection.rtl, style: new TextStyle(
+                          fontSize: 23), textAlign: TextAlign.center,),
                       ],
                   )
 
@@ -105,15 +56,19 @@ class HadeethsList extends StatelessWidget {
 
                 new Expanded(
                   child: ListView.builder(
+                    padding: EdgeInsets.all(0),
                     itemCount: AHadeeths.length,
                     itemBuilder: (context, index){
                       hadeethNum=index+1;
                       return Card(
-                        child: ListTile
+                          elevation: 0,
+                          color: Colors.transparent,
+                          margin: EdgeInsets.all(0),
+                          child: ListTile
                           (
                             onTap: (){
                               Navigator.push(context, MaterialPageRoute(builder:(BuildContext context){
-                                return ahadethContent(AHadeeths[index].HadeethName+" "+(index+1).toString(), index);
+                                return AhadethContent(AHadeeths[index].HadeethName+" "+(index+1).toString(), index);
                               }
                               ));
 

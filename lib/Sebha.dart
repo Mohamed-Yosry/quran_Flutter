@@ -4,10 +4,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class sebha extends StatefulWidget {
+import 'package:provider/provider.dart';
 
-  sebha();
+import 'AppConfigProvider.dart';
+
+class Sebha extends StatefulWidget {
+
+  Sebha();
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -15,70 +20,81 @@ class sebha extends StatefulWidget {
   }
 }
 
-class _sebha extends State<sebha> {
+class _sebha extends State<Sebha> {
   int counter = 0;
   List<String> s = ["سبحان الله","الله أكبر","الحمد لله"];
   int index = 0;
   _sebha();
 
   @override
-  Widget build(BuildContext context) {
+  late  AppConfigProvider provider;
+    @override
+    Widget build(BuildContext context) {
+      provider = Provider.of<AppConfigProvider>(context);
 
     // TODO: implement build
     return Scaffold(
+
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(
-                "assets/2.png"),
+            image: provider.isDarkModeEnable()?AssetImage("assets/bg.png"):AssetImage("assets/bg3.png"),
             fit: BoxFit.cover,
           ),
         ),
         child: Column(
             children:[
               Container(
-                margin: EdgeInsets.only(right: 10,top:25,bottom: 30),
+                margin: EdgeInsets.only(right: 10,top:20,bottom: 30),
                 child:
                   Center(
-                      child:Text("اسلامي",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                      child:Text(AppLocalizations.of(context)!.islamy,
+                        style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
                     ),
               ),
               Container(
-                padding: EdgeInsets.all(0),
-                child: Column(
+                //padding: EdgeInsets.all(0),
+                child: Stack(
                   children: [
-                    Padding(padding: EdgeInsets.only(left: 30,bottom:0),child:Image.asset("assets/sebhaHead.png",width: 80,height:80,)),
-                    new RotatedBox(
-                      child: IconButton(icon: Image.asset("assets/sebhaBody.png"),onPressed: () {
+                    Container(margin: EdgeInsets.only(right: 50),child:provider.isDarkModeEnable()?Image.asset("assets/headofseb7a.png",width: 80,height:80,):Image.asset("assets/sebhaHead.png",width: 80,height:80,)),
+                    Container(margin: EdgeInsets.only(top: 60),child:new RotatedBox(
+                      child: IconButton(icon: provider.isDarkModeEnable()? Image.asset("assets/bodyofseb7a.png"):Image.asset("assets/sebhaBody.png"),onPressed: () {
                         increament();
                       },iconSize: 200,),
                       quarterTurns: counter,
-                    )
+                    ))
                   ],
                 )
 
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 10,top: 20),
-                child:Text("عدد التسبيحات",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                margin: EdgeInsets.only(bottom: 10,top: 4),
+                child:Text(AppLocalizations.of(context)!.tasbeehCounter,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
               ),
               Container(
+                decoration:BoxDecoration(
+                border: Border.all(),
+                   borderRadius: BorderRadius.all(Radius.circular(12)),
+
+                    color: Theme.of(context).splashColor,
+                      ),
+
                 width: 50, height: 50,
                 alignment: Alignment.center,
-                color: Color.fromRGBO(250, 215, 160, 1),
                 margin: EdgeInsets.only(bottom: 20,top: 20),
                 child:Text("$counter" ,style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
               ),
         Container(
-          padding: EdgeInsets.only(bottom: 10),
+          padding: EdgeInsets.only(top: 20),
           child: RaisedButton(
                   child: Text(
                     s[index],
-                    style: TextStyle(color: Colors.white, fontSize: 45),
+                    style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
-                  color: Color.fromRGBO(223, 170, 97, 1),
                   padding: EdgeInsets.only(right: 15, left: 15, top: 15),
                   shape: StadiumBorder(),
+                  onPressed: (){},
                 ),
               )
             ]
