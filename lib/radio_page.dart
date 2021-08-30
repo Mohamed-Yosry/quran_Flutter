@@ -112,7 +112,7 @@ class _RadioChannel extends State< RadioChannel> with WidgetsBindingObserver {
         child: Column(
             children:[
               Container(
-                margin: EdgeInsets.only(right: 10,top:4,bottom: 30),
+                margin: EdgeInsets.only(right: 10,top:20,bottom: 30),
                 child:
                 Center(
                   child:Text(AppLocalizations.of(context)!.islamy,
@@ -136,29 +136,33 @@ class _RadioChannel extends State< RadioChannel> with WidgetsBindingObserver {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
               ),
               Container(
-                  padding: EdgeInsets.only(right: 25),
+                  //padding: EdgeInsets.only(right: 25),
                   margin: EdgeInsets.only(top: 20),child:Row(
 
                    children: [
-                        IconButton(icon: provider.isDarkModeEnable()? Image.asset("assets/nextDark.png"): Image.asset("assets/500.png")
+                     Expanded(
+                         child:IconButton(icon: provider.isDarkModeEnable()? Image.asset("assets/nextDark.png"): Image.asset("assets/500.png")
                           ,onPressed: () {
                           index++;
                           _player.setAudioSource(AudioSource.uri(Uri.parse(
                               s[index])));
 
-                    },iconSize: 100,),
-                     IconButton(icon:  provider.isDarkModeEnable()? Image.asset("assets/playDark.png"):Image.asset("assets/play.png")
+                    },iconSize: 100,)),
+                     Expanded(
+                         child:IconButton(icon:  provider.isDarkModeEnable()? Image.asset("assets/playDark.png"):Image.asset("assets/play.png")
                        ,onPressed: () {
 
                          _player.play();
 
+                       },iconSize: 100,)),
+                     Expanded(
+                       child: IconButton(icon:  provider.isDarkModeEnable()? Image.asset("assets/preDark.png"):Image.asset("assets/previos1.png")
+                         ,onPressed: () {
+                         index--;
+                         _player.setAudioSource(AudioSource.uri(Uri.parse(
+                             s[index])));
                        },iconSize: 100,),
-                     IconButton(icon:  provider.isDarkModeEnable()? Image.asset("assets/preDark.png"):Image.asset("assets/previos1.png")
-                       ,onPressed: () {
-                       index--;
-                       _player.setAudioSource(AudioSource.uri(Uri.parse(
-                           s[index])));
-                     },iconSize: 100,),
+                     ),
                   ],
                 ))
 

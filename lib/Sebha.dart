@@ -45,7 +45,7 @@ class _sebha extends State<Sebha> {
         child: Column(
             children:[
               Container(
-                margin: EdgeInsets.only(right: 10,top:4,bottom: 30),
+                margin: EdgeInsets.only(right: 10,top:20,bottom: 30),
                 child:
                   Center(
                       child:Text(AppLocalizations.of(context)!.islamy,
