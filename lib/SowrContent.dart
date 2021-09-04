@@ -34,6 +34,7 @@ class _SowerContent extends State<SowerContent> {
         resp += "(";
         resp += (i + 1).toString();
         resp += ")";
+        print(resp);
       }
     }
     setState(() {
@@ -71,7 +72,7 @@ class _SowerContent extends State<SowerContent> {
           margin: EdgeInsets.only(right: 30, left: 30, bottom: 80,top: 85),
           decoration: BoxDecoration(
             image: DecorationImage(
-              fit: BoxFit.scaleDown,
+              fit: BoxFit.fitWidth,
               image: provider.isDarkModeEnable()?AssetImage("assets/Rectangle 3.png"):AssetImage("assets/bg2.png"),
             ),
           ),

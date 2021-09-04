@@ -33,7 +33,7 @@ class MyThemeData {
 
       accentColor: Color.fromRGBO(183, 147, 95, 1),
       buttonColor: Color.fromRGBO(183, 147, 95, 1),
-    splashColor: Color.fromARGB(200, 120, 150,1),
+      splashColor: Color.fromARGB(200, 120, 150,1),
 
   );
 

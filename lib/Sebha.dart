@@ -56,13 +56,15 @@ class _sebha extends State<Sebha> {
                 //padding: EdgeInsets.all(0),
                 child: Stack(
                   children: [
-                    Container(margin: EdgeInsets.only(right: 50),child:provider.isDarkModeEnable()?Image.asset("assets/headofseb7a.png",width: 80,height:80,):Image.asset("assets/sebhaHead.png",width: 80,height:80,)),
-                    Container(margin: EdgeInsets.only(top: 60),child:new RotatedBox(
-                      child: IconButton(icon: provider.isDarkModeEnable()? Image.asset("assets/bodyofseb7a.png"):Image.asset("assets/sebhaBody.png"),onPressed: () {
-                        increament();
-                      },iconSize: 200,),
-                      quarterTurns: counter,
-                    ))
+                    Center(child: Container(child:provider.isDarkModeEnable()?Image.asset("assets/headofseb7a.png",width: 80,height:80,):Image.asset("assets/sebhaHead.png",width: 80,height:80,))),
+                    Center(
+                      child: Container(margin: EdgeInsets.only(top: 60),child:new RotatedBox(
+                        child: IconButton(icon: provider.isDarkModeEnable()? Image.asset("assets/bodyofseb7a.png"):Image.asset("assets/sebhaBody.png"),onPressed: () {
+                          increament();
+                        },iconSize: 200,),
+                        quarterTurns: counter,
+                      )),
+                    )
                   ],
                 )
 
@@ -85,7 +87,7 @@ class _sebha extends State<Sebha> {
                 margin: EdgeInsets.only(bottom: 20,top: 20),
                 child:Text("$counter" ,style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
               ),
-        Container(
+              Container(
           padding: EdgeInsets.only(top: 20),
           child: RaisedButton(
                   child: Text(
